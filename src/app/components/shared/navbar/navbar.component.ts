@@ -15,10 +15,7 @@ export class NavbarComponent implements OnInit {
   }
 
   buscarHeroe(texto:string){
-    console.log(texto);
-    console.log(this._heroService.findHero(texto));
     this.router.navigate(['/search', texto]);
-
   }
 
 }

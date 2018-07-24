@@ -1,18 +1,9 @@
-<h1>Heroes de Marvel y DC</h1>
+<h1>Buscando por: {{ find }}</h1>
+
+<div class="col-md-12">
+    no se encuentra ningun resultado para {{find}}
+</div>
 
 <div class="card-columns">
-  <div class="card animated fadeIn fast" *ngFor="let hero of heroes; let i = index">
-    <img class="card-img-top" [src]="hero.img" [alt]="hero.nombre">
-    <div class="card-body">
-      <h5 class="card-title">{{hero.nombre}}</h5>
-      <p class="card-text">{{hero.bio}}</p>
-      <p class="card-text">
-        <small class="text-muted">{{hero.aparicion}}</small>
-      </p>
-      <button (click)="seeHero(i)" type="button" class="btn btn-primary-outline btn-block">
-        ver mas...
-      </button>
-      <!-- <a [routerLink]="['/hero',i]" class="btn btn-primary-outline">ver mas...</a> -->
-    </div>
-  </div>
+  <app-card [hero]="hero" [index]="hero.idx" *ngFor="let hero of heroes"></app-card>
 </div>

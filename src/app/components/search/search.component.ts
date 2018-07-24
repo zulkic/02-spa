@@ -9,6 +9,7 @@ import { Router, ActivatedRoute } from '../../../../node_modules/@angular/router
 })
 export class SearchComponent implements OnInit {
   heroes: Hero[] = [];
+  find:string;
 
   constructor(private _heroesService: HeroesService, private router: Router, private activatedRouter:ActivatedRoute
   ) { }
@@ -16,12 +17,7 @@ export class SearchComponent implements OnInit {
   ngOnInit() {
     this.activatedRouter.params.subscribe(params => {
       this.heroes = this._heroesService.findHero(params['find']);
+      this.find = params['find'];
     })
-    console.log(this.heroes);
-  }
-
-  seeHero(i: number) {
-    this.router.navigate(['/hero', i]);
-    console.log(i);
   }
 }

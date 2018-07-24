@@ -71,7 +71,8 @@ export class HeroesService {
 
   public findHero(heroName:string){
     let heroesSearch:Hero[] = [];
-    this.heroes.forEach(hero => {
+    this.heroes.forEach((hero,index) => {
+      hero.idx = index;
       if(hero.nombre.toLowerCase().includes(heroName.toLowerCase())){
         heroesSearch.push(hero);
       }
@@ -86,4 +87,5 @@ export interface Hero{
   img:string;
   aparicion:string;
   casa:string;
+  idx?:number;
 }
