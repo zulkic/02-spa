@@ -14,6 +14,7 @@ import { HeroesService } from './services/heroes.service';
 import { HeroComponent } from './components/hero/hero.component';
 import { SearchComponent } from './components/search/search.component';
 import { CardComponent } from './components/card/card.component';
+import { FormComponent } from './components/form/form.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { CardComponent } from './components/card/card.component';
     HeroesComponent,
     HeroComponent,
     SearchComponent,
-    CardComponent
+    CardComponent,
+    FormComponent
   ],
   imports: [
     BrowserModule,
