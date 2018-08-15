@@ -35,7 +35,6 @@ export class FormComponent implements OnInit {
       console.log("entro aca");
       console.log(e.target.value);
       e.target.value = e.target.value.slice(0, -1);
-      console.log(e.target.value);
     }
 
     /*     validaRut(e) {
