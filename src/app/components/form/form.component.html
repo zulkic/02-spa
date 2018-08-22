@@ -8,3 +8,43 @@
     <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Another input" [value]="username" (input)="username = $event.target.value">
   </div>
 </form>
+
+<form>
+  <div [hidden]="!button1">
+    <div class="form-row">
+      <div class="form-group col-md-3">
+        <input type="text" class="form-control" id="coordenate1" #coordenate1 maxlength="1" pattern="[0-9]*" (keyup)="focusNext(1)"
+          (focus)='clearValue(1)'>
+      </div>
+      <div class="form-group col-md-3">
+        <input type="text" class="form-control" id="coordenate2" #coordenate2 maxlength="1" (keyup)="focusNext(2)" (focus)='clearValue(2)'>
+      </div>
+      <div class="form-group col-md-3">
+        <input type="text" class="form-control" id="coordenate3" #coordenate3 maxlength="1" (keyup)="focusNext(3)" (focus)='clearValue(3)'>
+      </div>
+      <div class="form-group col-md-3">
+        <input type="text" class="form-control" id="coordenate4" #coordenate4 maxlength="1" (keyup)="focusNext(4)" (focus)='clearValue(4)'>
+      </div>
+    </div>
+    <button class="btn btn-primary">confirmar</button>
+  </div>
+  <div [hidden]="button1">
+    <div class="form-row">
+      <div class="form-group col-md-3">
+        <input type="text" class="form-control" id="coordenate5" #coordenate5 maxlength="1" pattern="[0-9]*" (keyup)="focusStep(5)"
+          (focus)='clearValue(5)'>
+      </div>
+      <div class="form-group col-md-3">
+        <input type="text" class="form-control" id="coordenate6" #coordenate6 maxlength="1" (keyup)="focusStep(6)" (focus)='clearValue(6)'>
+      </div>
+      <div class="form-group col-md-3">
+        <input type="text" class="form-control" id="coordenate7" #coordenate7 maxlength="1" (keyup)="focusStep(7)" (focus)='clearValue(7)'>
+      </div>
+      <div class="form-group col-md-3">
+        <input type="text" class="form-control" id="coordenate8" #coordenate8 maxlength="1" (keyup)="focusStep(8)" (focus)='clearValue(8)'>
+      </div>
+    </div>
+    <button class="btn btn-primary">confirmar</button>
+  </div>
+
+</form>
